@@ -266,6 +266,7 @@ def annotation_main(args):
             if args.re_gene_annotation == True:
                 F[header_info.gene_1], F[header_info.gene_2], F[header_info.exon_1], F[header_info.exon_2] = \
                     annotation.get_gene_annotation(F[header_info.chr_1], F[header_info.pos_1], F[header_info.chr_2], F[header_info.pos_2], ref_gene_tb, ref_exon_tb)
+                print_line = '\t'.join(F)
 
             if args.closest_exon == True:
                 dist_to_exon, target_exon = annotation.distance_to_closest(F[header_info.chr_1], F[header_info.pos_1], F[header_info.chr_2], F[header_info.pos_2], ref_exon_tb)
